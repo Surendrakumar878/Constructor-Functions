@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // Amar is a singer, lives in Goa.
+
+    // Akbar is a chef, lives in Mumbai.
+
+    // Anthony is a Magician, lives in Kashmir.
+
+    // All three of them are best friends but because of work cannot meet
+    // .All of them wants to borrow each other 's skills for a while so that they can impress people.
+
+    // We want to make sure they can borrow each other 's skill.
+
+    // Create an object
+    // for each one of them with relevant methods and properties and see
+    // if you could
+    // let them borrow using.Call method.
+    // AMAR AKBAR ANTHONY
+    // Amar is a singer, lives in Goa.
+
+    // Akbar is a chef, lives in Mumbai.
+
+    // Anthony is a Magician, lives in Kashmir.
+    var amar = {
+        telent: "singer",
+        lives: "Goa",
+        work1: function() {
+            console.log(this.telent);
+        }
+    }
+    var Akbar = {
+        telent: "chef",
+        lives: "Mumbai",
+        work2: function(live) {
+            console.log(this.telent)
+
+        }
+    }
+    var Anthony = {
+        telent: "Magician",
+        lives: "Kashmir",
+        work3: function(live) {
+            console.log(this.telent)
+        }
+    }
+
+    Akbar.work2.call(amar)
+    Akbar.work2.call(Anthony)
+    Anthony.work3.call(Akbar)
+    Anthony.work3.call(amar)
+    amar.work1.call(Anthony)
+    amar.work1.call(Akbar)
+        // Anthony.work1.call(Akbar, )
+        // Anthony.work1.call(amar)
+</script>
